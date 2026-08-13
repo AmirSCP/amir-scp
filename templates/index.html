@@ -12,10 +12,6 @@
 
     <style>
 
-        /* =========================
-           RESET
-        ========================= */
-
         * {
             margin: 0;
             padding: 0;
@@ -33,11 +29,6 @@
             font-family: Arial, Tahoma, sans-serif;
             overflow-x: hidden;
         }
-
-
-        /* =========================
-           BACKGROUND
-        ========================= */
 
         body::before {
             content: "";
@@ -67,10 +58,7 @@
             z-index: -1;
         }
 
-
-        /* =========================
-           NAVBAR
-        ========================= */
+        /* NAVBAR */
 
         .navbar {
             position: sticky;
@@ -95,7 +83,6 @@
                 );
 
             background-size: 300% 100%;
-
             animation: navbarGlow 8s linear infinite;
 
             border-bottom: 2px solid rgba(255,255,255,0.15);
@@ -104,19 +91,15 @@
                 0 8px 35px rgba(124,58,237,0.45);
         }
 
-
         .navbar h1 {
             font-size: clamp(25px, 4vw, 38px);
-
             font-weight: 1000;
-
             letter-spacing: 4px;
 
             text-shadow:
                 3px 3px 0 #111,
                 0 0 15px rgba(255,255,255,0.4);
         }
-
 
         @keyframes navbarGlow {
 
@@ -133,10 +116,7 @@
             }
         }
 
-
-        /* =========================
-           HERO
-        ========================= */
+        /* HERO */
 
         .hero {
             min-height: calc(100vh - 78px);
@@ -148,15 +128,10 @@
             padding: 50px 20px;
         }
 
-
-        /* =========================
-           GRAFFITI WALL
-        ========================= */
+        /* GRAFFITI */
 
         .graffiti {
-
             width: min(1150px, 95vw);
-
             min-height: 570px;
 
             position: relative;
@@ -166,7 +141,6 @@
             justify-content: center;
 
             overflow: hidden;
-
             border-radius: 35px;
 
             background:
@@ -200,170 +174,99 @@
             border: 2px solid rgba(255,255,255,0.12);
 
             box-shadow:
-
                 0 0 30px rgba(124,58,237,0.35),
-
                 0 0 100px rgba(124,58,237,0.12),
-
                 inset 0 0 100px rgba(0,0,0,0.8);
         }
 
-
-        /* =========================
-           GRAFFITI LINES
-        ========================= */
+        /* PAINT */
 
         .paint {
-
             position: absolute;
-
             border-radius: 999px;
-
             opacity: 0.85;
-
             filter: blur(1px);
-
             pointer-events: none;
         }
 
-
         .paint.one {
-
             width: 380px;
             height: 45px;
-
             background: #ff0080;
-
             transform: rotate(25deg);
-
             top: 70px;
             left: -100px;
-
-            box-shadow:
-                0 0 25px #ff0080;
+            box-shadow: 0 0 25px #ff0080;
         }
-
 
         .paint.two {
-
             width: 420px;
             height: 50px;
-
             background: #00e5ff;
-
             transform: rotate(-20deg);
-
             bottom: 80px;
             right: -120px;
-
-            box-shadow:
-                0 0 25px #00e5ff;
+            box-shadow: 0 0 25px #00e5ff;
         }
-
 
         .paint.three {
-
             width: 260px;
             height: 38px;
-
             background: #facc15;
-
             transform: rotate(45deg);
-
             top: 45px;
             right: 100px;
-
-            box-shadow:
-                0 0 25px #facc15;
+            box-shadow: 0 0 25px #facc15;
         }
-
 
         .paint.four {
-
             width: 280px;
             height: 30px;
-
             background: #22c55e;
-
             transform: rotate(-35deg);
-
             bottom: 40px;
             left: 80px;
-
-            box-shadow:
-                0 0 25px #22c55e;
+            box-shadow: 0 0 25px #22c55e;
         }
 
-
-        /* =========================
-           CENTER CONTENT
-        ========================= */
+        /* CONTENT */
 
         .content {
-
             position: relative;
-
             z-index: 5;
-
             text-align: center;
-
             padding: 30px;
         }
 
-
         .small-title {
-
             font-size: 18px;
-
             color: #d8b4fe;
-
             letter-spacing: 4px;
-
             margin-bottom: 20px;
-
             text-transform: uppercase;
         }
 
-
         .graffiti-title {
-
-            font-size: clamp(
-                60px,
-                12vw,
-                155px
-            );
+            font-size: clamp(60px, 12vw, 155px);
 
             font-weight: 1000;
-
             line-height: 0.95;
-
             letter-spacing: 5px;
-
             color: white;
 
             transform: rotate(-4deg);
 
             text-shadow:
-
                 8px 8px 0 #ff0080,
-
                 -7px -7px 0 #00e5ff,
-
                 14px 17px 0 #000,
-
                 0 0 35px rgba(255,255,255,0.25);
         }
 
-
         .subtitle {
-
             margin-top: 35px;
 
-            font-size: clamp(
-                16px,
-                3vw,
-                24px
-            );
+            font-size: clamp(16px, 3vw, 24px);
 
             color: #e5e7eb;
 
@@ -371,31 +274,22 @@
                 0 0 15px rgba(255,255,255,0.2);
         }
 
-
-        /* =========================
-           BUTTONS
-        ========================= */
+        /* BUTTONS */
 
         .buttons {
-
             margin-top: 35px;
 
             display: flex;
-
             justify-content: center;
-
             flex-wrap: wrap;
 
             gap: 15px;
         }
 
-
         .button {
-
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
             min-width: 170px;
@@ -405,21 +299,16 @@
             border-radius: 999px;
 
             color: white;
-
             text-decoration: none;
 
             font-size: 17px;
-
             font-weight: bold;
 
-            background:
-                rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.08);
 
-            border:
-                1px solid rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.18);
 
-            backdrop-filter:
-                blur(10px);
+            backdrop-filter: blur(10px);
 
             transition:
                 transform 0.25s ease,
@@ -427,27 +316,30 @@
                 box-shadow 0.25s ease;
         }
 
-
         .button:hover {
+            transform: translateY(-5px) scale(1.03);
 
-            transform:
-                translateY(-5px)
-                scale(1.03);
-
-            background:
-                rgba(124,58,237,0.5);
+            background: rgba(124,58,237,0.5);
 
             box-shadow:
                 0 10px 30px rgba(124,58,237,0.45);
         }
 
+        /* UPDATE */
 
-        /* =========================
-           FOOTER
-        ========================= */
+        .update-text {
+            margin-top: 25px;
+
+            font-size: 15px;
+
+            color: #c4b5fd;
+
+            opacity: 0.9;
+        }
+
+        /* FOOTER */
 
         footer {
-
             text-align: center;
 
             padding: 25px 15px;
@@ -457,10 +349,7 @@
             font-size: 14px;
         }
 
-
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 600px) {
 
@@ -469,18 +358,13 @@
             }
 
             .graffiti {
-
                 min-height: 500px;
-
                 width: 94vw;
-
                 border-radius: 25px;
             }
 
             .graffiti-title {
-
                 font-size: 58px;
-
                 letter-spacing: 2px;
             }
 
@@ -493,14 +377,11 @@
             }
 
             .buttons {
-
                 flex-direction: column;
-
                 align-items: center;
             }
 
             .button {
-
                 width: 220px;
             }
         }
@@ -508,13 +389,9 @@
     </style>
 </head>
 
-
 <body>
 
-
-    <!-- =========================
-         NAVBAR
-    ========================== -->
+    <!-- NAVBAR -->
 
     <header class="navbar">
 
@@ -525,27 +402,16 @@
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- HERO -->
 
     <main class="hero">
 
         <section class="graffiti">
 
-
-            <!-- Graffiti Paint -->
-
             <div class="paint one"></div>
-
             <div class="paint two"></div>
-
             <div class="paint three"></div>
-
             <div class="paint four"></div>
-
-
-            <!-- Main Content -->
 
             <div class="content">
 
@@ -553,18 +419,17 @@
                     OFFICIAL WEBSITE
                 </div>
 
-
                 <div class="graffiti-title">
                     AMIR SCP
                 </div>
-
 
                 <p class="subtitle">
                     🎮 گیمینگ • 🎥 استریم • 🚀 تولید محتوا
                 </p>
 
-
                 <div class="buttons">
+
+                    <!-- آپارات -->
 
                     <a
                         class="button"
@@ -576,24 +441,46 @@
                     </a>
 
 
+                    <!-- یوتیوب -->
+
                     <a
                         class="button"
                         href="https://www.youtube.com/@Amir_Mahdi_SCP"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         ▶️ یوتیوب
                     </a>
 
 
+                    <!-- اینستاگرام -->
+
                     <a
-                        class="buttou"
+                        class="button"
                         href="https://www.instagram.com/amir_scp.ir"
-                        >
-                         📸 اینستاگرام
-            
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        📸 اینستاگرام
                     </a>
 
-                    
+
+                    <!-- تلگرام -->
+
+                    <a
+                        class="button"
+                        href="https://t.me/Amir_Mahdi_SCP"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        ✈️ تلگرام
+                    </a>
+
                 </div>
+
+                <p class="update-text">
+                    🔥 به دنیای AMIR SCP خوش آمدید!
+                </p>
 
             </div>
 
@@ -602,9 +489,7 @@
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -613,7 +498,6 @@
         تمامی حقوق محفوظ است.
 
     </footer>
-
 
 </body>
 
